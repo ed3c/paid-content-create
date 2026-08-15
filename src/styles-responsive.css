@@ -1,0 +1,431 @@
+.calculator-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(380px, 1.1fr);
+  gap: 18px;
+  align-items: stretch;
+}
+
+.fee-form {
+  padding: 26px;
+}
+
+.fee-form .toggle {
+  margin: 22px 0;
+}
+
+.fee-result {
+  padding: 26px;
+  min-height: 430px;
+}
+
+.fee-hero {
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--line);
+}
+
+.fee-hero span {
+  color: var(--muted);
+  font-size: 0.74rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.fee-hero strong {
+  display: block;
+  margin-top: 7px;
+  color: var(--accent);
+  font-size: clamp(3rem, 6vw, 5.4rem);
+  line-height: 1;
+  letter-spacing: -0.07em;
+}
+
+.fee-metrics {
+  margin: 22px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 9px;
+}
+
+.fee-metric {
+  padding: 13px;
+  border: 1px solid var(--line);
+  border-radius: 11px;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.fee-metric span,
+.fee-metric strong {
+  display: block;
+}
+
+.fee-metric span {
+  color: var(--muted);
+  font-size: 0.69rem;
+}
+
+.fee-metric strong {
+  margin-top: 5px;
+  font-size: 1.15rem;
+}
+
+.assumption-list {
+  font-size: 0.76rem;
+}
+
+.guardrail-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.guardrail-grid article {
+  min-height: 210px;
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--panel);
+}
+
+.guardrail-grid span {
+  color: var(--cyan);
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.guardrail-grid h3 {
+  margin: 38px 0 8px;
+}
+
+.guardrail-grid p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.84rem;
+}
+
+.source-header {
+  margin: 60px 0 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 20px;
+}
+
+.source-header h3 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.source-key {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 7px;
+  color: var(--muted);
+  font-size: 0.72rem;
+}
+
+.source-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  margin-left: 8px;
+}
+
+.source-dot.official {
+  background: var(--accent);
+}
+
+.source-dot.government {
+  background: var(--cyan);
+}
+
+.source-dot.research {
+  background: var(--amber);
+}
+
+.source-list {
+  border-top: 1px solid var(--line);
+}
+
+.source-row {
+  padding: 15px 0;
+  display: grid;
+  grid-template-columns: 125px 1fr 130px;
+  gap: 18px;
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+}
+
+.source-type {
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.source-type.official {
+  color: var(--accent);
+}
+
+.source-type.government {
+  color: var(--cyan);
+}
+
+.source-type.research-input {
+  color: var(--amber);
+}
+
+.source-row a,
+.source-row span.source-title {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 750;
+}
+
+.source-row a:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+}
+
+.source-row small {
+  color: var(--muted);
+  text-align: right;
+}
+
+.site-footer {
+  width: var(--content);
+  margin: 0 auto;
+  padding: 36px 0 46px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  border-top: 1px solid var(--line);
+}
+
+.site-footer p {
+  margin: 5px 0 0;
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+.footer-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.footer-actions a,
+.text-button {
+  color: var(--muted);
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+
+.footer-actions a:hover,
+.text-button:hover {
+  color: var(--text);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 1040px) {
+  .site-header {
+    grid-template-columns: 1fr auto;
+  }
+
+  .site-nav {
+    display: none;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .hero-copy {
+    padding-top: 40px;
+  }
+
+  .hero-panel {
+    max-width: 680px;
+    transform: none;
+  }
+
+  .layer-grid,
+  .guardrail-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .layer-card:nth-child(2),
+  .layer-card:nth-child(4) {
+    transform: none;
+  }
+
+  .router-layout,
+  .calculator-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .recommendation {
+    position: static;
+    min-height: auto;
+  }
+
+  .platform-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 740px) {
+  :root {
+    --content: min(100% - 24px, 1180px);
+  }
+
+  .site-header {
+    top: 7px;
+    margin-top: 8px;
+    min-height: 62px;
+  }
+
+  .brand small,
+  .header-cta {
+    display: none;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 80px 0;
+  }
+
+  h1 {
+    font-size: clamp(3rem, 15vw, 5rem);
+  }
+
+  .hero-metrics {
+    gap: 22px;
+  }
+
+  .architecture-section,
+  .router-section,
+  .catalog-section,
+  .calculator-section,
+  .evidence-section {
+    padding: 78px 0;
+  }
+
+  .split-heading {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .layer-grid,
+  .guardrail-grid,
+  .platform-grid,
+  .form-grid,
+  .choice-grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .choice-card {
+    min-height: 112px;
+  }
+
+  .catalog-toolbar {
+    grid-template-columns: 1fr;
+  }
+
+  .fee-metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .source-row {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+
+  .source-row small {
+    text-align: left;
+  }
+
+  .site-footer {
+    flex-direction: column;
+  }
+}
+
+@media print {
+  .site-header,
+  .hero-actions,
+  .decision-form,
+  .catalog-toolbar,
+  .platform-actions,
+  .fee-form,
+  .site-footer,
+  .result-actions {
+    display: none !important;
+  }
+
+  body {
+    background: white;
+    color: black;
+  }
+
+  body::before {
+    display: none;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 30px 0;
+  }
+
+  .hero-panel,
+  .layer-card,
+  .recommendation,
+  .platform-card,
+  .fee-result,
+  .guardrail-grid article {
+    background: white;
+    color: black;
+    box-shadow: none;
+    border-color: #bbb;
+  }
+
+  .router-layout,
+  .calculator-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .platform-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .recommendation {
+    position: static;
+  }
+
+  .muted,
+  .hero-lead,
+  .platform-tagline,
+  .section-heading > p,
+  .split-heading > p,
+  .reason-list,
+  .assumption-list {
+    color: #333 !important;
+  }
+}

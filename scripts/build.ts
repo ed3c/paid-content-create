@@ -15,7 +15,7 @@ export async function buildApp(): Promise<void> {
     format: "esm",
     minify: process.env.NODE_ENV === "production",
     sourcemap: process.env.NODE_ENV === "production" ? "none" : "external",
-    naming: "client.js"
+    naming: { entry: "client.js" }
   });
 
   if (!result.success) {
@@ -26,6 +26,8 @@ export async function buildApp(): Promise<void> {
   await Promise.all([
     copyFile(join(ROOT, "public/index.html"), join(DIST, "index.html")),
     copyFile(join(ROOT, "src/styles.css"), join(DIST, "assets/styles.css")),
+    copyFile(join(ROOT, "src/styles-components.css"), join(DIST, "assets/styles-components.css")),
+    copyFile(join(ROOT, "src/styles-responsive.css"), join(DIST, "assets/styles-responsive.css")),
     writeFile(
       join(DIST, "build.json"),
       JSON.stringify(
