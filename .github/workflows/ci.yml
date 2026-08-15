@@ -49,3 +49,5 @@ jobs:
           test -f dist/index.html
           test -f dist/assets/client.js
           test -f dist/assets/styles.css
+          test -f dist/assets/styles-components.css
+          test -f dist/assets/styles-responsive.css

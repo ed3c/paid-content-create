@@ -126,6 +126,8 @@ paid-content-create/
 │   ├── client.ts
 │   ├── server.ts
 │   ├── styles.css
+│   ├── styles-components.css
+│   ├── styles-responsive.css
 │   ├── types.ts
 │   ├── data/
 │   │   ├── platforms.ts
